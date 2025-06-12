@@ -329,100 +329,106 @@ export default function UltrassomLanding() {
       </section>
 
       {/* Depoimentos */}
-      <section className="py-16 bg-gray-50" id="depoimentos">
+      <section 
+        className="py-16" 
+        id="depoimentos"
+        style={{
+          background: `linear-gradient(135deg, #008B47 0%, #2EA55C 50%, #8dbf44 100%)`,
+        }}
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#3b3f3d" }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               O que dizem nossos pacientes
             </h2>
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  <Star key={star} className="w-5 h-5 fill-white text-white" />
                 ))}
               </div>
-              <span className="text-lg font-semibold">4.9/5 no Google</span>
-              <span className="text-gray-600">• 200+ exames mensais</span>
+              <span className="text-lg font-semibold text-white">4.9/5 no Google</span>
+              <span className="text-white/80">• 200+ exames mensais</span>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card>
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-6">
                 <div className="flex mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    <Star key={star} className="w-4 h-4 fill-white text-white" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4">
+                <p className="text-white mb-4">
                   "Fiz meu ultrassom às 8h e às 11h já tinha o laudo. Incrível! Atendimento rápido e profissional."
                 </p>
                 <div className="flex items-center gap-3">
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: "#f0fdf4" }}
+                    style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}
                   >
-                    <span className="font-semibold" style={{ color: "#008B47" }}>
+                    <span className="font-semibold text-white">
                       M
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold">Maria Silva</p>
-                    <p className="text-sm text-gray-600">Paciente</p>
+                    <p className="font-semibold text-white">Maria Silva</p>
+                    <p className="text-sm text-white/80">Paciente</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-6">
                 <div className="flex mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    <Star key={star} className="w-4 h-4 fill-white text-white" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4">
+                <p className="text-white mb-4">
                   "Preço justo e a médica explicou tudo durante o exame. Recomendo para quem não tem plano."
                 </p>
                 <div className="flex items-center gap-3">
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: "#f0fdf4" }}
+                    style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}
                   >
-                    <span className="font-semibold" style={{ color: "#2EA55C" }}>
+                    <span className="font-semibold text-white">
                       J
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold">João Santos</p>
-                    <p className="text-sm text-gray-600">Paciente</p>
+                    <p className="font-semibold text-white">João Santos</p>
+                    <p className="text-sm text-white/80">Paciente</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-6">
                 <div className="flex mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    <Star key={star} className="w-4 h-4 fill-white text-white" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4">
+                <p className="text-white mb-4">
                   "Equipamento moderno e ambiente limpo. Consegui agendar no mesmo dia que liguei."
                 </p>
                 <div className="flex items-center gap-3">
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: "#f0fdf4" }}
+                    style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}
                   >
-                    <span className="font-semibold" style={{ color: "#8dbf44" }}>
+                    <span className="font-semibold text-white">
                       A
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold">Ana Costa</p>
-                    <p className="text-sm text-gray-600">Paciente</p>
+                    <p className="font-semibold text-white">Ana Costa</p>
+                    <p className="text-sm text-white/80">Paciente</p>
                   </div>
                 </div>
               </CardContent>
@@ -445,13 +451,12 @@ export default function UltrassomLanding() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5" style={{ color: "#008B47" }} />
-                  Precisa de pedido médico?
+                  Como funciona o atendimento?
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700">
-                  Sim, mas ajudamos a conseguir com nossos clínicos gerais. Consulta médica disponível no local por R$
-                  80.
+                  Presencial com agendamento via WhatsApp. Atendimento ágil e sem filas.
                 </p>
               </CardContent>
             </Card>
@@ -460,13 +465,12 @@ export default function UltrassomLanding() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5" style={{ color: "#008B47" }} />
-                  Tem preparo especial?
+                  Trabalha com convênios?
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700">
-                  Apenas jejum de 8 horas para ultrassom abdominal completo. Outros exames não precisam de preparo
-                  especial.
+                  Não. Atendemos exclusivamente como clínica particular, com recibo para reembolso.
                 </p>
               </CardContent>
             </Card>
@@ -475,13 +479,12 @@ export default function UltrassomLanding() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5" style={{ color: "#008B47" }} />
-                  Consegue detectar câncer?
+                  Como agendo minha consulta?
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700">
-                  O ultrassom identifica alterações que podem requerer investigação adicional. Nossos laudos são
-                  detalhados e precisos.
+                  Entre em contato pelo WhatsApp (75) 3026‑8494 ou via redes sociais.
                 </p>
               </CardContent>
             </Card>
@@ -490,12 +493,12 @@ export default function UltrassomLanding() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5" style={{ color: "#008B47" }} />
-                  Aceita cartão de crédito?
+                  Qual o valor das consultas?
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700">
-                  Sim! Aceitamos cartão de crédito, débito, PIX e dinheiro. Parcelamento em até 3x sem juros.
+                  Consultas a partir de R$ 150 e procedimentos desde R$ 80.
                 </p>
               </CardContent>
             </Card>
