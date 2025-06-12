@@ -19,6 +19,9 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        oscine: ['Oscine', 'sans-serif'],
+      },
       colors: {
         // Cores oficiais da franquia Atend Já
         brand: {

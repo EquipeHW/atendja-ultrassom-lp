@@ -23,15 +23,10 @@ import {
 import Image from "next/image"
 
 export default function UltrassomLanding() {
-  const whatsappNumber = "5575930268494"
-  const whatsappMessage = "Olá! Gostaria de agendar um ultrassom."
-
-  const handleWhatsAppClick = () => {
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`, "_blank")
-  }
+  const whatsappNumber = "557530268494"
 
   return (
-    <div className="min-h-screen" style={{ background: "linear-gradient(to bottom, #8dbf4410, white)" }}>
+    <div className="min-h-screen font-oscine" style={{ background: "linear-gradient(to bottom, #8dbf4410, white)" }}>
     {/* Header */}
     <header className="bg-white shadow-sm border-b">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -60,7 +55,7 @@ export default function UltrassomLanding() {
 
       {/* Header Hero Section */}
       <section
-        className="text-white py-16 md:py-24 relative overflow-hidden"
+        className="text-white py-16 md:py-14 relative overflow-hidden"
         style={{
           background: `linear-gradient(135deg, #008B47 0%, #2EA55C 50%, #8dbf44 100%)`,
         }}
@@ -68,13 +63,10 @@ export default function UltrassomLanding() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div className="text-center lg:text-left">
-              <Badge className="mb-4 text-white" style={{ backgroundColor: "#8dbf44" }}>
-                <Zap className="w-4 h-4 mr-1" />
-                Resultados no mesmo dia
-              </Badge>
+              
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{ color: "#fff " }}>
-                Ultrassom em Feira de Santana com <span style={{ color: "#fff" }}>Resultados Ágeis</span> e{" "}
-                <span style={{ color: "#fff" }}>Preço Justo</span>
+                Ultrassom em Feira de Santana com <span className="font-bold" style={{ color: "#fff" }}>Resultados Ágeis</span> e{" "}
+                <span className="font-bold" style={{ color: "#fff" }}>Preço Justo</span>
               </h1>
               <p className="text-lg md:text-xl text-white mb-6">
                 Na Atend Já, você faz seu exame com equipamentos de última geração, sem filas e sem necessidade de plano
@@ -85,7 +77,7 @@ export default function UltrassomLanding() {
                   size="lg"
                   className="text-[#2EA55C] px-8 py-4 text-lg hover:opacity-90"
                   style={{ backgroundColor: "#fff" }}
-                  onClick={handleWhatsAppClick}
+                  onClick={() => window.open(`https://api.whatsapp.com/send/?phone=${whatsappNumber}&text&type=phone_number&app_absent=0`, "_blank")}
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
                   AGENDAR CONSULTA
@@ -94,24 +86,14 @@ export default function UltrassomLanding() {
               </div>
               
             </div>
-            <div className="relative">
+            <div className="relative flex justify-end">
               <Image
-                src="/6.png?height=400&width=500"
+                src="/6.png?height=500&width=500"
                 alt="Equipamento de ultrassom moderno"
                 width={500}
                 height={400}
-                className="rounded-lg"
+                className="rounded-3xl"
               />
-              <div className="absolute -bottom-4 -left-4 bg-white p-4 rounded-lg shadow-lg">
-                <div className="flex items-center gap-2">
-                  <Award className="w-6 h-6 text-[#2EA55C]" />
-                  <div>
-                    <p className="font-semibold text-sm text-black">Equipamento Moderno</p>
-                   
-                  </div>
-                </div>
-              </div>
-              
             </div>
           </div>
         </div>
@@ -141,10 +123,10 @@ export default function UltrassomLanding() {
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={handleWhatsAppClick}
+                  onClick={() => window.open(`https://api.whatsapp.com/send/?phone=${whatsappNumber}&text&type=phone_number&app_absent=0`, "_blank")}
                   style={{ borderColor: "#008B47", color: "#008B47" }}
                 >
-                  Agendar
+                  AGENDAR CONSULTA
                 </Button>
               </CardContent>
             </Card>
@@ -160,10 +142,10 @@ export default function UltrassomLanding() {
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={handleWhatsAppClick}
+                  onClick={() => window.open(`https://api.whatsapp.com/send/?phone=${whatsappNumber}&text&type=phone_number&app_absent=0`, "_blank")}
                   style={{ borderColor: "#008B47", color: "#008B47" }}
                 >
-                  Agendar
+                   AGENDAR CONSULTA
                 </Button>
               </CardContent>
             </Card>
@@ -179,10 +161,10 @@ export default function UltrassomLanding() {
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={handleWhatsAppClick}
+                  onClick={() => window.open(`https://api.whatsapp.com/send/?phone=${whatsappNumber}&text&type=phone_number&app_absent=0`, "_blank")}
                   style={{ borderColor: "#008B47", color: "#008B47" }}
                 >
-                  Agendar
+                 AGENDAR CONSULTA
                 </Button>
               </CardContent>
             </Card>
@@ -198,10 +180,10 @@ export default function UltrassomLanding() {
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={handleWhatsAppClick}
+                  onClick={() => window.open(`https://api.whatsapp.com/send/?phone=${whatsappNumber}&text&type=phone_number&app_absent=0`, "_blank")}
                   style={{ borderColor: "#008B47", color: "#008B47" }}
                 >
-                  Agendar
+                   AGENDAR CONSULTA
                 </Button>
               </CardContent>
             </Card>
@@ -337,7 +319,7 @@ export default function UltrassomLanding() {
               size="lg"
               className="text-white px-8 py-4 text-lg hover:opacity-90 font-bold"
               style={{ backgroundColor: "#008B47" }}
-              onClick={handleWhatsAppClick}
+              onClick={() => window.open(`https://api.whatsapp.com/send/?phone=${whatsappNumber}&text&type=phone_number&app_absent=0`, "_blank")}
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               AGENDAR CONSULTA
@@ -524,7 +506,7 @@ export default function UltrassomLanding() {
               size="lg"
               className="text-white px-8 py-4 text-lg hover:opacity-90 font-bold"
               style={{ backgroundColor: "#008B47" }}
-              onClick={handleWhatsAppClick}
+              onClick={() => window.open(`https://api.whatsapp.com/send/?phone=${whatsappNumber}&text&type=phone_number&app_absent=0`, "_blank")}
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               AGENDAR CONSULTA
@@ -550,12 +532,7 @@ export default function UltrassomLanding() {
               <p className="text-white/70 mb-4">
               Ultrassonografia com tecnologia de ponta e preços acessíveis em Feira de Santana.
               </p>
-              <div className="flex space-x-4">
-                <Badge className="text-white" style={{ backgroundColor: "#008B47" }}>
-                  <Shield className="w-4 h-4 mr-1" />
-                  Equipamentos Certificados SBD
-                </Badge>
-              </div>
+              
             </div>
 
             <div>
